@@ -3,6 +3,9 @@ import { Button } from '../components/Button'
 
 export default class Home extends Component{
     render(){
+        function createQuiz():void{
+            console.log('Button clicked!');
+        }
         return (
             <div className='font-["Alegreya"] h-[1500px] bg-[#FEEFC8]'>
                 <h1>Квизы</h1>
@@ -10,8 +13,8 @@ export default class Home extends Component{
                 <Button
                     color="primary"
                     size="small"
-                    title="Добавить товар"
-                    onClick={}>
+                    title="Создать квиз"
+                    onClick={createQuiz}>
                 </Button>
 
             </div>

@@ -3,7 +3,7 @@ import React from "react";
 type SizeType = "small" | "middle" | "large";
 type ColorType = "primary" | "secondary";
 
-interface ButtonProps {
+interface TextProps {
     size: SizeType;
     color: ColorType;
     title: string;
@@ -11,7 +11,7 @@ interface ButtonProps {
     children?: React.JSX.Element;
 }
 
-export const Button = (props: ButtonProps) => {
+export const Text = (props: TextProps) => {
 const { size, color, title, onClick } = props;
 const defaultClass =
     "flex items-center rounded-2 h-[40px] w-[max-content] px-4 py-2 cursor-pointer";
