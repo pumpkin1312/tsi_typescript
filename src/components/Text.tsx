@@ -6,32 +6,31 @@ type ColorType = "primary" | "secondary";
 interface TextProps {
     size: SizeType;
     color: ColorType;
-    title: string;
-    onClick: () => void;
-    children?: React.JSX.Element;
+    title: string;    
 }
 
 export const Text = (props: TextProps) => {
-const { size, color, title, onClick } = props;
+const { size, color, title} = props;
 const defaultClass =
     "flex items-center rounded-2 h-[40px] w-[max-content] px-4 py-2 cursor-pointer";
 
 const classes = {
     colors: {
     primary: {
-        button: "bg-[#CFE2F3]",
+        button: "bg-auto",
         text: "auto",
         border: "1px solid"
     },
     secondary: {
-        button: "bg-red-500",
+        button: "bg-auto",
         text: "auto",
+        border: "1px solid"
     },
     },
     sizes: {
-    small: "rounded-[100px] font-sm",
-    middle: "rounded-[14px] font-base",
-    large: "rounded-[16px] font-base min-h-[56px]",
+    small: "font-sm",
+    middle: "font-base text-xl",
+    large: "font-base min-h-[56px] text-3xl",
     },
 };
 return (
@@ -43,7 +42,6 @@ return (
         " " +
         classes.colors[color].button
     }
-    onClick={onClick}
     >
     <span className={classes.colors[color].text}>{title}</span>
     </div>
